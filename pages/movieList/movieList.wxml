@@ -1,0 +1,26 @@
+<!--pages/movieList/movieList.wxml-->
+<view class='container'>
+    <block wx:for='{{movies}}'>
+    <navigator url='/pages/detail/detail?movieId={{item.id}}' class='movie-item'>
+      <view class='img'><image mode='' src='{{item.images.small}}'></image>
+      </view>
+      <view class='info'>
+        <view selectable='true' bindlongtap='copy'><text>{{item.title}}</text><text class='score'>{{item.rate}}</text></view>
+        <view></view>
+        <view><text class='director ' wx:for='{{item.directors}}' wx:for-item='director'>{{director.name}}</text>
+        </view>
+        <view>
+        <text class='cast ' wx:for='{{item.casts}}' wx:for-item='cast'>{{cast.name}}</text></view>
+        <view><text>类型：{{item.genres}}</text></view>
+        <view><text>上映日期：{{item.pubdates}}</text></view>
+      </view>
+      <!-- <view class='info'>
+        <text>{{item.title}}</text> 
+        <text class='score'>{{item.rating.average}}</text>
+        <text>\n导演{{item.directors.name}}</text>
+        <text>\n{{item.genres}}</text>
+        <text>\n上映日期{{item.pubdates}}</text>
+      </view> -->
+    </navigator>
+  </block>
+</view>

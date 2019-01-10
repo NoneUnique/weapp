@@ -1,0 +1,61 @@
+/* pages/movieList2/movieList2.wxss */
+/* pages/index2/index2.wxss */
+/**index.wxss**/
+
+text {
+  font-size: 14px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.more {
+  float: right;
+}
+.movie-tags text{
+  padding-right: 5px;
+  
+}
+.actived{
+  /* font-size: 18px; */
+  color: #000;
+}
+.normal{
+  color: #ccc;
+}
+.movie-list {
+  width: 100%;
+}
+
+.movie-item {
+  width: 29%;
+  /* padding: 5px; */
+  display: inline-block;
+}
+
+.img {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+}
+
+.img image {
+  width: 100%;
+  border-radius: 5%;
+  height: 100%;
+  box-shadow: 1px 3px 3px #cac;
+}
+
+.name {
+  white-space: pre-wrap;
+  position: absolute;
+  width: 30%;
+  text-align: center;
+  line-height: 0.9;
+}
+.score{
+  color: orange;
+  font-size: 13px;
+  font-weight: bolder;
+}

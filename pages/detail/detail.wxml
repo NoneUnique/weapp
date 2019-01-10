@@ -1,0 +1,70 @@
+<!--pages/detail/detail.wxml-->
+<view class='bg-img'>
+  <image src="{{detail.images.large}}" lazy-load='true' mode='aspectFill'></image>
+</view>
+<view class='container'>
+  <view class='detail'>
+    <view class='small-img'>
+      <image mode="aspectFill" src="{{detail.images.small}}" lazy-load='true' />
+    </view>
+    <view class='info'>
+      <text class='title'>{{detail.title}}</text>
+      <text class='countries'>\n{{detail.countries}}</text>
+      <text class='durations'>\n{{detail.durations}}</text>
+      <text class='genres'>\n{{detail.genres}}</text>
+      <text class='timer'></text>
+    </view>
+    <view class='star'>{{detail.rating.average}}</view>
+  </view>
+  <view>
+    <view class="summary {{isFolded?'hide':'show'}}">
+      <text>剧情简介：\n</text>
+      <text bindtap="showAll">{{detail.summary}}</text>
+    </view>
+  </view>
+  <!--导演演员-->
+  <view class='content-head'>
+    <text >导演</text>
+  </view>
+  <scroll-view scroll-x class='person-intro'>
+    <view wx:for='{{detail.directors}}' wx:for-item='director' class='person'>
+      <image class='img-person' src='{{director.avatars.small}}'></image>
+      <text class='.person-name'>\n{{director.name}}</text>
+    </view>
+</scroll-view>
+<!--演员-->
+<view class='content-head'>
+  <text>演员</text>
+</view>
+<scroll-view scroll-x class='person-intro'>
+  <view wx:for='{{detail.casts}}' wx:for-item='cast' class='person'>
+    <image class='img-person' src='{{cast.avatars.small}}'></image>
+    <text class='.person-name'>\n{{cast.name}}</text>
+  </view>
+</scroll-view>
+
+<!--评论-->
+<view class='content-head'>
+  <text>精彩评论</text>
+  <text>({{detail.popular_comments.length}})</text>
+</view>
+<view class="comments" wx:for='{{detail.popular_comments}}' wx:for-item='comments'>
+  <view class="avatar-img">
+    <image class='review-icon' src='{{comments.author.avatar}}'></image>
+  </view>
+  <view class="comment-body">
+    <text class="user-name">{{comments.author.name}}</text>
+    <text class='created-time'>{{comments.created_at}}</text>
+    <text class='summary'>\n{{comments.content}}</text>
+  </view>
+</view>
+<!--图片-->
+<view>
+  <view class='content-head'>
+    <text>图片</text>
+  </view>
+  <view wx:for='{{detail.photos}}' wx:for-item='photo'>
+    <image src='{{photo.image}}'></image>
+  </view>
+</view>
+</view>

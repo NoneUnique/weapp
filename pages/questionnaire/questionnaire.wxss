@@ -1,0 +1,11 @@
+/* pages/questionnaire/questionnaire.wxss */
+form{
+  width: 100%;
+  height: 100%;
+}
+textarea{
+  border: 1px solid #dbdbdb;
+}
+button{
+  margin: 15px 25px;
+}

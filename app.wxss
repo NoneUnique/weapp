@@ -1,0 +1,119 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  box-sizing: border-box;
+  margin: 15px;
+  margin-top: 0;
+} 
+
+/**人物图片**/
+.img-person{
+  width: 250rpx;
+  height: 300rpx;
+}
+/**滑动图**/
+.person-intro{
+  width: 100%;
+  height: 400rpx;
+  display: flex;
+  white-space: nowrap;
+}
+.person{
+  width: 280rpx;
+  display: inline-block;
+}
+/**评论头像**/
+.review-icon{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+/**评论内容**/
+.user-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #de4c1c;
+}
+.created-time{
+  font-size: 24rpx;
+  padding-left: 15rpx;
+  color: #BBBBBB;
+}
+.comments {
+  position: relative;
+}
+.avatar-img {
+  z-index: 2;
+  position: absolute;
+  top: 35rpx;
+  left: -10px;
+}
+
+.comment-body {
+  padding: 25rpx 0 20rpx 100rpx;
+  color: #696a52;
+  border-bottom:1px solid #ccc;
+}
+/**标题**/
+.content-head{
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 25px;
+  border-bottom: 1px solid #bbb;
+}
+.content-head text{
+  border-bottom: 1px solid rgb(45, 228, 252);
+}
+/**name**/
+/**有圆角阴影的电影图**/
+/**隐藏显示**/
+.hide{
+ display: -webkit-box;
+}
+.hideList{
+  display: none;
+}
+.show{
+ display: block;
+}
+/**电影列表**/
+.movie-list{
+  width: 100%;
+}
+.movie-item{
+  padding: 5px;
+  display: flex;
+  border-radius: 5%;
+  align-items:center;
+  margin-bottom:25px;
+  /* box-shadow: 1px  3px 3px #ccaacc; */
+}
+.img{
+  width: 33%;
+  flex: 3;
+  height: 150px;
+}
+.img image{
+  width: 100%;
+  border-radius: 5%;
+  height: 100%;
+  /* box-shadow: 1px  3px 3px #ccaacc; */
+}
+.info{
+  flex: 6;
+  font-size: 32rpx;
+  padding-left: 25rpx;
+}
+.score{
+  font-size: 30px;
+  color: #f17814c4;
+}
+.director:first-child::before{
+  content: '导演：';
+}
+.cast:first-child::before{
+  content: '演员：';
+}
+.cast:nth-child(n-1)::after,.director:nth-child(n-1)::after{
+  content: ',';
+}

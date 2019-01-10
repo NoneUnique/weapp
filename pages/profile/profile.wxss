@@ -1,0 +1,38 @@
+/* pages/profile/profile.wxss */
+.aevter{
+  border-top: 1px solid #e4e4e4;
+  background-color: #82A6F5;
+  height: 400rpx;
+}.userInfo{
+  text-align: center;
+}
+.userinfo-avatar{
+  height: 200rpx;
+  width: 200rpx;
+  background: #e4e4e4;
+  border-radius: 50%;
+}
+.ceil{
+  font-size: 14px;
+}
+.ceil-item{
+  padding: 20rpx 20rpx;
+  border-radius:5rpx;
+  border: 1px solid #e4e4e4;
+}
+.content-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*小箭头*/
+.arrow{
+  display: flex;
+  justify-content: space-between;
+}
+.arrow image{
+  width: 36rpx;
+  height: 36rpx;
+}

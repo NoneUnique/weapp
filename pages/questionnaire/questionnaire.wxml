@@ -1,0 +1,36 @@
+<!--pages/questionnaire/questionnaire.wxml-->
+<view class='container'>
+<form bindsubmit="formSubmit">
+  <view>
+    <view>
+      <text>您的性别</text>
+    </view>
+    <view>
+      <radio-group name='rg3'>
+        <label>
+          <radio value='rg3-r1'>男</radio>
+          <radio value='rg3-r2'>女</radio>
+          <radio value='rg3-r3'>保密</radio>
+        </label>
+      </radio-group>
+    </view>
+    <view>
+      <text>我们的小程序是否方便快捷？</text>
+      <radio-group name='rg2'>
+        <label><radio value='rg2-r1'>是</radio></label>
+        <label><radio value='rg2-r2'>否</radio></label>
+      </radio-group>
+    </view>
+    <view>
+      <text>您还想我们的小程序添加什么功能</text>
+      <textarea name='textarea1'></textarea>
+    </view>
+    <view>
+      <text>您对我们还有什么意见和建议</text>
+      <textarea name='textarea2'></textarea>
+    </view>
+  </view>
+  <view><button form-type="submit"> 提交 </button></view>
+  
+</form>
+</view>

@@ -1,0 +1,10 @@
+/* pages/movieList/movieList.wxss */
+.movie-list{
+  width: 100%;
+}
+.movie-item{
+  box-shadow: 1px  3px 3px #ccaacc;
+}
+.img image{
+  box-shadow: 1px  3px 3px #ccaacc;
+}

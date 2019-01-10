@@ -1,0 +1,45 @@
+<!--pages/index2/index2.wxml-->
+<view class='container'>
+  <block wx:for='{{movies}}' wx:for-item='movie'>
+    <view class='title'>
+      <text >{{movie.title}}</text>
+      <navigator class='more' url='/pages/movieList/movieList?navName={{movie.title}}&tag={{movie.types}}'>
+        <text>更多</text>
+      </navigator>
+    </view>
+    <scroll-view class='movie-list' scroll-x>
+      <block wx:for='{{movie.datas}}' wx:for-item='item'>
+        <navigator url='/pages/detail/detail?movieId={{item.id}}' class='movie-item'>
+          <view class='img'>
+            <image mode='aspectFill' src='{{item.images.small}}' lazy-load='true'></image>
+          </view>
+          <view class='name'>
+            <text selectable='true' bindlongtap='copy'>{{item.title}}</text>
+          </view>
+        </navigator>
+      </block>
+    </scroll-view>
+  </block>
+  <block>
+    <view class='movie-tags'>
+      <text class='title'>热门电影</text>
+      <text bindtap='btn' wx:for='{{moviesTags}}' class="{{item==tags?'actived':'normal'}}">{{item}}</text>
+      <navigator class='more' url='/pages/movieList2/movieList2?navName=热门电影'>
+        <text>更多</text>
+      </navigator>
+    </view>
+    <scroll-view class='movie-list' scroll-x>
+      <block wx:for='{{moviesMore}}' wx:for-item='item'>
+        <navigator url='/pages/detail/detail?movieId={{item.id}}' class='movie-item'>
+          <view class='img'>
+            <image mode='aspectFill' src='{{item.cover}}' lazy-load='true'></image>
+            <text class='score'>{{item.rating.average}}</text>
+          </view>
+          <view class='name'>
+            <text selectable='true' bindlongtap='copy'>{{item.title}}</text>
+          </view>
+        </navigator>
+      </block>
+    </scroll-view>
+  </block>
+</view>

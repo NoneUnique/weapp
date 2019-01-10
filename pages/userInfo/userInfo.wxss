@@ -1,0 +1,10 @@
+/* pages/userInfo/userInfo.wxss */
+.ceil{
+  border-bottom: 1px solid #e0e0e0;
+  height: 50px;
+}
+.avatar{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}

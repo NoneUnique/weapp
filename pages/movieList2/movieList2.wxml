@@ -1,0 +1,22 @@
+<!--pages/movieList2/movieList2.wxml-->
+<view class='container'>
+  <block>
+    <view class='movie-tags'>
+      <text class='title'>热门电影</text>
+      <text bindtap='btn' wx:for='{{moviesTags}}' class="{{item==tag?'actived':'normal'}}">{{item}}</text>
+    </view>
+    <view class='movie-list'>
+      <block wx:for='{{moviesMore}}' wx:for-item='item'>
+        <navigator url='/pages/detail/detail?movieId={{item.id}}' class='movie-item'>
+          <view class='img'>
+            <image mode='aspectFill' src='{{item.cover}}' lazy-load='true'></image>
+          </view>
+          <view class='name'>
+            <text>{{item.title}}</text>
+            <text  class='score'>{{item.rate}}</text>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </block>
+</view>

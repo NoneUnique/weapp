@@ -1,0 +1,73 @@
+/* pages/index2/index2.wxss */
+/**index.wxss**/
+
+text {
+  font-size: 13px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.more {
+  float: right;
+}
+.movie-tags text{
+  padding-right: 5px;
+  
+}
+.actived{
+  /* font-size: 18px; */
+  color: #000;
+}
+.normal{
+  color: #ccc;
+}
+.movie-list {
+  width: 100%;
+  height: 440rpx;
+  display: flex;
+  white-space: nowrap;
+}
+
+swiper-item {
+  width: 30% !important;
+  padding: 5px;
+}
+
+.movie-item {
+  width: 30%;
+  padding: 5px;
+  display: inline-block;
+}
+
+.img {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+}
+
+.img image {
+  width: 100%;
+  border-radius: 5%;
+  height: 100%;
+  box-shadow: 1px 3px 3px #cac;
+}
+
+.score {
+  width: 100%;
+  background: rgba(25, 252, 203, 0.911);
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+}
+
+.name {
+  white-space: pre-wrap;
+  position: absolute;
+  width: 30%;
+  text-align: center;
+  line-height: 0.9;
+}

@@ -1,0 +1,39 @@
+<!--pages/message/message.wxml-->
+<view class='container'>
+  <view class='search-bar'>
+    <input type='text' bindinput="bindKeyInput" value='{{searchName}}'></input>
+    <button class='search' bindtap='btnClick'>
+      <icon type='search'></icon>
+    </button>
+  </view>
+
+  <view class="search-list {{isFold}}">
+    <navigator class='search-item' wx:for='{{list}}' url='/pages/detail/detail?movieId={{item.id}}' >
+      <view class='icon-movie'>
+        <image src='{{item.img}}' mode=''></image>
+      </view>
+      <view class='search-info'>
+        <text>{{item.sub_title}}\n</text>
+        <text>{{item.title}}\n</text>
+        <text>上映时间：{{item.year}}\n</text>
+      </view>
+    </navigator>
+  </view>
+  <!--点击搜索-->
+  <view class="movie-list {{isFoldClick}}">
+    <navigator url='/pages/detail/detail?movieId={{item.id}}' class='movie-item' wx:for='{{list}}'>
+      <view class='img'>
+        <image mode='aspectFit' src='{{item.images.small}}'></image>
+      </view>
+      <view class='info'>
+        <view><text>{{item.title}}（{{item.original_title}}）\n</text></view>
+        <view><text class='director ' wx:for='{{item.directors}}' wx:for-item='director'>{{director.name}}</text>
+        </view>
+        <view>
+        <text class='cast ' wx:for='{{item.casts}}' wx:for-item='cast'>{{cast.name}}</text></view>
+        <view><text>类型：{{item.genres}}</text></view>
+        <view><text>上映日期：{{item.year}}</text></view>
+      </view>
+    </navigator>
+  </view>
+</view>

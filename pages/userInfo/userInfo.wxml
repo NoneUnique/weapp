@@ -1,0 +1,12 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class='userInfo'>
+  <view class='ceil'>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" class='avatar'></image>
+  </view>
+  <view class='ceil'>
+    <text class="userinfo-nickname">\n{{userInfo.nickName}}</text>
+  </view>
+  <view class='ceil'>
+    <text>{{userInfo.country}}</text>
+  </view>
+</view>

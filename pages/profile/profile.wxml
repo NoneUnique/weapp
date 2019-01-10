@@ -1,0 +1,23 @@
+<!--pages/profile/profile.wxml-->
+<view class="userinfo aevter content-center">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+    <block wx:else>
+     <view class='userInfo'>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">\n{{userInfo.nickName}}</text>
+      </view>
+      
+    </block>
+  </view>
+<view class='ceil'>
+  <navigator class='ceil-item arrow' url='/pages/userInfo/userInfo?userInfo={{userInfo}}'>
+    <text>个人资料</text>
+    <!-- <image src='images/next.png'></image> -->
+  </navigator>
+  <view class='divLine'></view>
+  <navigator class='ceil-item arrow' url='./../questionnaire/questionnaire'>
+    <text>问卷</text>
+    <!-- <image src='images/next.png'></image> -->
+  </navigator>
+  <!-- <view class='divLine'></view> -->
+</view>

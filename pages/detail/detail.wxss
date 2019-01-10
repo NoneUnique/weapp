@@ -1,0 +1,73 @@
+/* pages/detail/detail.wxss */
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.bg-img {
+  width: 100%;
+  height: 33%;
+}
+
+.bg-img image {
+  width: 100%;
+}
+
+.detail {
+  width: 100%;
+  display: flex;
+}
+
+.small-img {
+  width: 33%;
+  margin-top: -15%;
+}
+
+.small-img image {
+  height: 320rpx;
+  width: 240rpx;
+  border-radius: 8%;
+  box-shadow: 1px 3px 3px #cac;
+}
+.info{
+  margin-left: 45rpx;
+  font-size: 38rpx;
+}
+
+.title {
+  font-weight: bolder;
+  position: relative;
+}
+
+.star {
+  position: absolute;
+  right: 0;
+  font-size: 32rpx;
+  color: orange;
+}
+
+.star::before {
+  content: '评分';
+  font-size: 30rpx;
+  color: #000;
+}
+
+.summary {
+  font-size: 32rpx;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  position: relative;
+}
+.arrow{
+ position: absolute;
+ width: 40rpx;
+ height: 43rpx;
+ left: 90%;
+ background-color: #ccc;
+}
+.person-name{
+  font-size: 28rpx;
+}
